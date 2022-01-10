@@ -555,153 +555,162 @@ header .respons {
     stroke-dashoffset: calc(440 - (440 * 70) / 100);
     stroke: rgba(250, 140, 14, 0.89);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* header {
+/* -------------------------------------  */
+/* start Services   */
+.services {
+    margin: 70px auto;
+    padding: 30px auto;
     position: relative;
-    /* z-index: 10; */
-    /* background-color: white;
-    box-shadow: 0 0 10px #ddd;
 }
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
- /* header .container .logo {
-    width:140px;
-    padding: 20px;
+.services::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    height: 100%;
+    width: 50%;
+    background-image: url("../images/services-left-dec.jpg");
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    z-index: -3;
 }
-@media (max-width:768px) {
-    header .container .logo {
-        padding: 20px 0px;
-    }
-}  */
-/* ----- MENU ------  */
- /* header .container .menu {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 20px;
-   max-width: 100%;
-   transition: var(--transition-main);
+.services::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+   background-image: url("../images/services-right-dec.jpg");
+    /* background-repeat: round; */
+    z-index: -3;
 }
- header .container .menu li > a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    padding: 10px;
-    font-size: 15px;
-    text-transform: uppercase;
-    color: black;
-    transition: var(--transition-main);
- }
- @media (max-width:992px) {
-    header .container .menu li > a {
-        margin-left: 10px;
-        font-size: 13px;
-        padding: 5px;
-    }
-}
- header .container .menu li:hover a {
-    color: var(--text-main-color);
-}
- header .container .menu .active {
-    color: var(--text-main-color);
-}
-header .container .menu .button a {
-    margin-left: 15px;
-    padding: 10px 20px 10px 20px;
+/* ---- Main-Header ----  */
+.services  .main-header {
+    margin: 20px auto;
+    padding: 5px;
     text-align: center;
-    border: 2px solid var(--text-main-color);
-    border-radius: 50px;
-    color: var(--text-main-color);
-    transition: var(--transition-main);
+    position: relative;
 }
-@media (max-width:992px) {
-    header .container .menu .button {
-        display: none;
-    }
-}
-header .container .menu .button a:hover {
+.services  .main-header::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
     background-color: var(--text-main-color);
-    color: white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
-/* ------  */
-/* .checkbtn {
-    display: none;
-    cursor: pointer;
-    font-size: 25px;
+.services  .main-header h4 { 
+    color: var(--text-main-color);
+    font-size: 18px;
+    font-weight: bold;
 }
-#check {
-    display: none;
+.services  .main-header h2 {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+}
+.services  .main-header h2 span {
+    color: var(--text-main-color);
 }
 
 @media (max-width:768px) {
-    .checkbtn {
-        display: flex;
+    .services  .main-header h4 {
+        font-size: 14px;
     }
-
-    header .container  {
-         position: relative;
-        z-index: 5; 
+    .services  .main-header h2 {
+        font-size: 24px;
     }
-
-    header .container .menu {
-        position: absolute;
-        overflow: hidden;
-        width: 100%;
-        top: -330px;
-        left: 50%;
-        padding: 0 20px 0 20px;
-        transform: translateX(-50%);
+}
+/* ------ End Main Header  */
+.services .container .box-holder{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax(200px ,1fr));
+    gap: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+@media (max-width:768px) {
+    .services .container .box-holder {
+       grid-template-columns: repeat( auto-fill , minmax(100px ,1fr)); 
+    }
+}
+.services .container .box-holder .box {
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 16px;
+    background-color: #ffffff;
+    /* box-shadow:  6px 6px 12px #c9c9c9, */
+             /* -6px -6px 12px #ffffff; */
+    transition:var(--transition-main);
+}
+.services .container .box-holder .box:hover {
+         box-shadow:  6px 6px 12px #c9c9c9, 
+              -6px -6px 12px #ffffff; 
+}
+@media (max-width:768px) {
+    .services .container .box-holder .box:nth-child(5) {
+           width: 100%;
+    align-self: center;
+    position: relative;
+    left: 50px;
+    transform: translateX(20%);
+    }
+}
+.services .container .box-holder .box h2 {
+    margin-top: 20px;
+}
+/* --------------------  */
+.services .container .sec {
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow:  -11px 11px 22px #cfcfcf,
+             11px -11px 22px #ffffff,
+                -11px -11px 22px #f0f0f0,
+             11px 11px 22px #cfcfcf;
+}
+@media (max-width:768px) {
+    .services .container .sec {
         flex-direction: column;
-        background-color: #e7e7e77a;
-        transition: var(--transition-main);
     }
-    header .container .menu > li  {
-        padding: 10px;
-        border-bottom: 1px solid #e0d7d77d;
-        width: calc(100% + 20px);
-        transition: var(--transition-main);
-    }
-    header .container .menu > li:hover {
-        background-color: #ddd;
-    }
-    #check:checked ~ ul  {
-        top: 80px;
-        
-        
-    }
-}  */
+    .services .container .sec .image img {
+    max-width: 100%;
+   }
+}
+.services .container .sec .image {
+    order: 2;
+}
+
+.services .container .sec .text p {
+    margin: 15px 0px;
+    color: #777;
+    font-size: 17px;
+}
+.services .container .sec .text h2 {
+    color: var(--text-main-color);
+    margin: 10px 0 30px;
+}
+.services .container .sec .text .list {
+    display: inline-flex; 
+}
+.services .container .sec .text .list ul li {
+    margin: 10px;
+    position: relative;
+    display: flex;
+}
+.services .container .sec .text .list ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    margin-right: 10px;
+}
 
