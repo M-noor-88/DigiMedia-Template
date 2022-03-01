@@ -1191,6 +1191,7 @@ header .respons {
 
 /* TODO------- part -2  */
 .blog .container .part-2 {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1199,10 +1200,21 @@ header .respons {
 }
 
 .blog .container .part-2 .box {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+
+.blog .container .part-2 .box::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-main-color);
+    bottom: 0;
+
 }
 
 @media (max-width:768px) {
@@ -1286,7 +1298,7 @@ header .respons {
 
 @media(max-width:768px) {
     .contact .main-header {
-        margin:10px 0;
+        margin: 10px 0;
     }
 }
 
@@ -1392,6 +1404,12 @@ header .respons {
 
     .contact .container .cont .boxes .box span {
         font-size: 11px;
+    }
+}
+
+@media (max-width:500px) {
+    .contact .container .cont .boxes .box span {
+        font-size: 8px;
     }
 }
 
