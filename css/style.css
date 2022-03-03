@@ -1223,6 +1223,10 @@ header .respons {
         /* * .blog .container .part-2 .box  */
         flex-direction: column;
     }
+
+    .blog .container .part-2 .box {
+        padding: 10px;
+    }
 }
 
 
@@ -1355,8 +1359,6 @@ header .respons {
     align-items: center;
     gap: 20px;
     padding: 10px;
-
-
 }
 
 .contact .container .cont .boxes {
