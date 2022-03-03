@@ -261,7 +261,7 @@ header .respons {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: #d7d7d78c;
+        background-color: #edd3d0e6;
         align-items: center;
         left: 50%;
         transform: translateX(-50%);
@@ -389,7 +389,6 @@ header .respons {
 .landing .container .text h2 {
     font-weight: bold;
     font-size: 45px;
-    word-spacing: -5px;
     margin-bottom: 20px;
 }
 
@@ -1241,12 +1240,13 @@ header .respons {
 .blog .container .part-2 .box .date-h3 h3 {
     background-color: var(--text-main-color);
     color: white;
-    font-size: 14px;
-    padding: 5px;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
+    font-size: 11px;
+    padding: 3px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .blog .container .part-2 .box .img-hold img {
@@ -1310,6 +1310,7 @@ header .respons {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: rgb(158, 157, 155); */
     /* border: 2px solid rgb(128, 122, 122); */
     /* border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -1359,6 +1360,35 @@ header .respons {
     align-items: center;
     gap: 20px;
     padding: 10px;
+    position: relative;
+}
+
+.contact .container .cont::after {
+    content: "";
+    position: absolute;
+    right: -2px;
+    top: 349px;
+    width: 101%;
+    height: 25%;
+    background-image: url(../images/contact-bottom-right-v2.png);
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+@media (max-width:992px) {
+    .contact .container .cont::after {
+        max-width: 100%;
+        top: 290px;
+        right: 5px;
+    }
+}
+
+@media (max-width:768px) {
+    .contact .container .cont::after {
+        max-width: 100%;
+        top: 435px;
+        right: 10px;
+    }
 }
 
 .contact .container .cont .boxes {
@@ -1401,7 +1431,7 @@ header .respons {
     }
 
     .contact .container .cont .boxes {
-        gap: 5px;
+        gap: 15px;
     }
 
     .contact .container .cont .boxes .box span {
@@ -1440,9 +1470,9 @@ header .respons {
 
 @media (max-width:768px) {
     .contact .container .cont form div:first-of-type {
-        gap: 5px;
+        gap: 10px;
         width: 100%;
-
+        margin: 10px;
     }
 }
 
@@ -1467,7 +1497,7 @@ header .respons {
 
     .contact .container .cont form input {
         margin: 2px 0px;
-        max-width: 100%;
+        max-width: 80%;
     }
 }
 
@@ -1522,8 +1552,32 @@ header .respons {
     }
 }
 
-/* ? End contact section  */
+/*  ? End contact div  */
+/* ! End contact section  */
+footer {
+    margin-top: 60px;
+    padding-top: 10px;
+    height: 70px;
+    width: 100%;
+    background-image: url("../images/footer-bg-v2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
 
+footer p {
+    color: white;
+    margin: 5px;
+}
+
+@media (max-width:768px) {
+    footer p {
+        font-size: 12px;
+    }
+    footer {
+        max-width: 100%;
+    }
+}
 
 
 
